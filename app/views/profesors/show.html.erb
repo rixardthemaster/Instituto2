@@ -1,0 +1,34 @@
+<p>
+  <strong>Nombre:</strong>
+  <%= @profesor.nombreprof %>
+</p>
+
+<p>
+  <strong>Apellido:</strong>
+  <%= @profesor.approf %>
+</p>
+
+<p>
+  <strong>Correo:</strong>
+  <%= @profesor.correo %>
+</p>
+
+<p>
+  <strong>Especialidad:</strong>
+  <%= @profesor.especialidad.nombre %>
+</p>
+
+<H2> ALUMNOS </H2)>
+  <%@alumnos.each do |alumno| %>
+  <p>
+  <strong>NOMBRE:<STRONG>
+  <%=alumno.nombreal %>
+</p>
+<p>
+<strong>APELLIDO:<STRONG>
+<%=alumno.appal %>
+</p>
+<% end %>
+
+<%= link_to 'Editar', edit_profesor_path(@profesor) %> |
+<%= link_to 'Atras', profesors_path %>
