@@ -1,0 +1,33 @@
+<%= form_for(@profesor) do |f| %>
+  <% if @profesor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@profesor.errors.count, "error") %> prohibited this profesor from being saved:</h2>
+
+      <ul>
+      <% @profesor.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombreprof %><br>
+    <%= f.text_field :nombreprof %>
+  </div>
+  <div class="field">
+    <%= f.label :approf %><br>
+    <%= f.text_field :approf %>
+  </div>
+  <div class="field">
+    <%= f.label :correo %><br>
+    <%= f.text_field :correo %>
+  </div>
+  <div class="field">
+    <%= f.label :especialidad_id %><br>
+    <%= f.select("especialidad_id", Especialidad.all.collect{|l| [ l.nombre, l.id ] }, {include_blank: 'Seleccione Especialidad'}) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

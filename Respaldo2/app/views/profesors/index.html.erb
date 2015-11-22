@@ -1,10 +1,10 @@
-<div class="panel panel-default">
+<p id="notice"><%= notice %></p>
+
 <h1>Profesores</h1>
 
 <table>
   <thead>
     <tr>
-      <table class="table">
       <th>Nombre</th>
       <th>Apellido</th>
       <th>Correo</th>
@@ -19,15 +19,14 @@
         <td><%= profesor.nombreprof %></td>
         <td><%= profesor.approf %></td>
         <td><%= profesor.correo %></td>
-        <td><%= profesor.especialidad.nombre %></td>
+        <td><%= profesor.especialidad %></td>
         <td><%= link_to 'Show', profesor %></td>
         <td><%= link_to 'Edit', edit_profesor_path(profesor) %></td>
-        <td><%= link_to 'Destroy', profesor, method: :delete, data: { confirm: 'Seguro que quieres eliminar?' } %></td>
+        <td><%= link_to 'Destroy', profesor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-</div>
 
 <br>
 
