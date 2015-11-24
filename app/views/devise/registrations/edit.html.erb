@@ -1,3 +1,4 @@
+<center>
 <h2>Editar <%= resource_name.to_s.humanize %></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -27,6 +28,7 @@
     <%= f.password_field :current_password, autocomplete: "off" %>
   </div>
 
+
   <div class="actions">
     <%= f.submit "Update" %>
   </div>
@@ -37,3 +39,4 @@
 <p>Descontento? <%= button_to "Eliminar cuenta", registration_path(resource_name), data: { confirm: "Estas seguro de eliminar cuenta?" }, method: :delete %></p>
 
 <%= link_to "Atras", :back %>
+</center>

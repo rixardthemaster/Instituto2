@@ -1,13 +1,42 @@
+<div class="panel panel-default">
+
+  <div class="panel-heading">Alumnos</div>
+  <p>
+    <table>
+      <thead>
+        <tr>
+    <table class="table">
+<strong>Nombre: </strong>
+<%= @alumno.nombreal %>
+</p>
 <p>
+<strong>Apellido: </strong>
+<%= @alumno.appal %></strong>
+</p>
+</tr>
+</thead>
+</table>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">Profesores del Alumno</div>
+<p>
+  <table>
+    <thead>
+      <tr><% @profesors.each do |profesor| %>
   <strong>Nombre:</strong>
-  <%= @alumno.nombreal %>
-</p>
-
-<p>
+  <%= profesor.nombreprof %>
   <strong>Apellido:</strong>
-  <%= @alumno.appal %>
-</p>
-
+  <%= profesor.approf %>
+  <strong>Especialidad:</strong>
+  <%= profesor.especialidad.nombre %>
+  <br>
+</tr>
+</thead>
+<br>
+</table>
+<% end %>
+</div>
+<br>
 
 <%= link_to 'Editar', edit_alumno_path(@alumno) %> |
-<%= link_to 'Atras', alumnos_path %>
+<%= link_to 'Atras', inicio_index_path %>

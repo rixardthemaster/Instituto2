@@ -1,11 +1,12 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Alumnos</h1>
+<div class="panel panel-default">
+  <div class="panel-heading">Alumnos</div>
 
 <table>
   <thead>
     <tr>
-      <th>Nombre  </th><br>
+      <table class="table">
+
+      <th>Nombre  </th>
       <th>Apellido</th>
       <th colspan="3"></th>
     </tr>
@@ -23,10 +24,8 @@
     <% end %>
   </tbody>
 </table>
-
+</div>
 <br>
 
-<%= link_to 'Agregar Alumno', new_alumno_path %>
-<br>
-<br>
-<%= link_to "Atras", :back %>
+<center><%= link_to 'Agregar Alumno', new_alumno_path %></center>
+<center><%= link_to 'Atras', inicio_index_path %></center>

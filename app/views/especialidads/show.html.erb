@@ -1,9 +1,11 @@
-<p id="notice"><%= notice %></p>
+<div class="panel panel-default">
+
+  <div class="panel-heading">ESPECIALIDAD</div>
 
 <p>
   <strong>Nombre:</strong>
   <%= @especialidad.nombre %>
 </p>
-
-<%= link_to 'Edit', edit_especialidad_path(@especialidad) %> |
-<%= link_to 'Back', especialidads_path %>
+</div>
+<%= link_to 'Editar', edit_especialidad_path(@especialidad) %> |
+<%= link_to 'Atras', especialidads_path %>

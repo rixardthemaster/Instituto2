@@ -1,5 +1,11 @@
-<H2> PROFESOR </H2)>
-<p>
+<div class="panel panel-default">
+
+  <div class="panel-heading">Profesor</div>
+  <p>
+   <table>
+     <thead>
+       <tr>
+  <table class="table">
   <strong>Nombre:</strong>
   <%= @profesor.nombreprof %>
 </p>
@@ -18,18 +24,23 @@
   <strong>Especialidad:</strong>
   <%= @profesor.especialidad.nombre %>
 </p>
+</tr>
+</thead>
+<br>
+</table>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">Alumnos</div>
 
-<H2> ALUMNOS </H2)>
-  <%@alumnos.each do |alumno| %>
   <p>
-  <strong>NOMBRE:<STRONG>
+  <%@alumnos.each do |alumno| %>
+  <strong>Nombre:<STRONG>
   <%=alumno.nombreal %>
-</p>
-<p>
-<strong>APELLIDO:<STRONG>
-<%=alumno.appal %>
-</p>
+  </p>
+  <p>
+  <strong>Apellido:<STRONG>
+  <%=alumno.appal %>
+  </p>
 <% end %>
 
-<%= link_to 'Editar', edit_profesor_path(@profesor) %> |
-<%= link_to 'Atras', profesors_path %>
+<p>
