@@ -1,0 +1,36 @@
+
+<div class="panel panel-default">
+  <div class="panel-heading">Temas</div>
+
+<table>
+  <thead>
+    <tr>
+      <table class="table">
+      <th>Titulo</th>
+      <th>Contenido</th>
+      <th>Usuario</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @foros.each do |foro| %>
+      <tr>
+        <td><%= foro.titulo %></td>
+        <td><%= foro.contenido %></td>
+        <td><%= foro.usuario.email %></td>
+        <td><%= link_to 'Show', foro %></td>
+        <% if current_usuario.email == foro.usuario.email %>
+        <td><%= link_to 'Edit', edit_foro_path(foro) %></td>
+        <td><%= link_to 'Destroy', foro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
+<br>
+<center>
+<%= link_to 'Nuevo Tema', new_foro_path %>
+</center>

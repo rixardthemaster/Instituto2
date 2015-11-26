@@ -1,0 +1,28 @@
+<div class="panel panel-default">
+
+  <div class="panel-heading">Foros</div>
+<p>
+  <table>
+    <thead>
+      <tr>
+  <table class="table">
+  <strong>Titulo:</strong>
+  <%= @foro.titulo %>
+</p>
+
+<p>
+  <strong>Contenido:</strong>
+  <%= @foro.contenido %>
+</p>
+
+<p>
+  <strong>By:</strong>
+  <%= @foro.usuario.email%>
+</p>
+</thead>
+</table>
+</div>
+<% if current_usuario.email == @foro.usuario.email %>
+<%= link_to 'Edit', edit_foro_path(@foro) %> |
+<%= link_to 'Back', foros_path %>
+<% end %>
